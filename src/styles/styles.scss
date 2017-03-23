@@ -1,0 +1,91 @@
+@import "./mixins";
+@import "./vars";
+
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  word-wrap: break-word;
+}
+
+body {
+  position: relative;
+  font-size: 1em;
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $teal-dark !important;
+
+}
+
+@media all and (max-width: 700px) {
+  body {
+    font-size: 1.2em !important;
+
+  }
+  select, label {
+    font-size: .6em !important;
+
+  }
+}
+
+.container.container-slider {
+  @media all and (max-width: 768px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.inner-container {
+  font-size: 2em;
+  @include blur(5px);
+  @include transition(.3s);
+  padding: 0 !important;
+  overflow-y: visible;
+}
+
+nav {
+  padding: 1em 0;
+
+}
+
+nav a {
+  margin: 0 1em;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+.select-wrapper {
+  margin-top: 1em;
+}
+
+.text-wrapper > * {
+  margin-bottom: 2em;
+
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.hideElement {
+  display: none;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.opaque {
+  opacity: 0;
+}
+
+.removeBlur {
+  @include blur(0);
+}
+
+footer {
+  font-size: .6em;
+}

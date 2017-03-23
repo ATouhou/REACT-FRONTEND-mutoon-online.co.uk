@@ -1,0 +1,40 @@
+@import "./../../../styles/mixins";
+@import "./../../../styles/vars";
+
+
+.playBtn.btn-group {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: 9999999999999;
+   text-align: center;
+   margin-bottom: 0;
+
+   .btn.btn-default{
+     background: $teal-light-opaque-80;
+     color: #FFF;
+     border-right: 1px solid $teal-dark-opaque-50;
+     border-radius: 0;
+     padding-top: 15px;
+     padding-bottom: 15px;
+
+
+     &:hover{
+       background: $teal-light;
+     }
+
+     &:last-child {
+       border-right: 1px solid transparent;
+     }
+   }
+
+   @media all and (max-width: 400px) {
+
+
+   }
+
+
+ }
+

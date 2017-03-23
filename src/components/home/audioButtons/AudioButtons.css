@@ -1,0 +1,22 @@
+.playBtn.btn-group {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999999999999;
+  text-align: center;
+  margin-bottom: 0; }
+  .playBtn.btn-group .btn.btn-default {
+    background: rgba(0, 151, 137, 0.8);
+    color: #FFF;
+    border-right: 1px solid rgba(0, 151, 137, 0.5);
+    border-radius: 0;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    .playBtn.btn-group .btn.btn-default:hover {
+      background: #009789; }
+    .playBtn.btn-group .btn.btn-default:last-child {
+      border-right: 1px solid transparent; }
+
+/*# sourceMappingURL=AudioButtons.css.map */

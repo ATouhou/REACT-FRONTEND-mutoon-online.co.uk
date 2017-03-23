@@ -1,0 +1,77 @@
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  word-wrap: break-word; }
+
+body {
+  position: relative;
+  font-size: 1em; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #005a51 !important; }
+
+@media all and (max-width: 700px) {
+  body {
+    font-size: 1.2em !important; }
+
+  select, label {
+    font-size: .6em !important; } }
+@media all and (max-width: 768px) {
+  .container.container-slider {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+.inner-container {
+  font-size: 2em;
+  -webkit-filter: blur(5px) !important;
+  -moz-filter: blur(5px) !important;
+  -o-filter: blur(5px) !important;
+  -ms-filter: blur(5px) !important;
+  filter: blur(5px) !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0 !important;
+  overflow-y: visible; }
+
+nav {
+  padding: 1em 0; }
+
+nav a {
+  margin: 0 1em; }
+
+nav a.active {
+  text-decoration: underline; }
+
+.select-wrapper {
+  margin-top: 1em; }
+
+.text-wrapper > * {
+  margin-bottom: 2em;
+  font-weight: 300;
+  font-size: 30px; }
+
+.hideElement {
+  display: none;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s; }
+
+.opaque {
+  opacity: 0; }
+
+.removeBlur {
+  -webkit-filter: blur(0) !important;
+  -moz-filter: blur(0) !important;
+  -o-filter: blur(0) !important;
+  -ms-filter: blur(0) !important;
+  filter: blur(0) !important; }
+
+footer {
+  font-size: .6em; }
+
+/*# sourceMappingURL=styles.css.map */

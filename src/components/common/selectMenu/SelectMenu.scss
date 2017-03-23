@@ -1,0 +1,33 @@
+@import "./../../../styles/vars";
+@import "./../../../styles/mixins";
+
+.select-menus-container {
+  margin: auto !important;
+  padding-left: 0 !important;
+  @include opacity(0,0);
+  @include transition(.2s);
+
+
+  & option {
+    text-align: center;
+  }
+
+}
+
+.select-wrapper {
+
+  @media all and (max-width: 350px) {
+    font-size: .8em;
+  }
+
+  & .material-icons {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    vertical-align: middle;
+    color: $teal-light;
+
+  }
+}
+
+

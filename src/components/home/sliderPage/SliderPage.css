@@ -1,0 +1,30 @@
+.arabic-text {
+  font-family: 'Lateef', cursive;
+  margin-bottom: 1em;
+  text-align: center; }
+
+.english-text {
+  font-family: 'Lato', sans-serif;
+  font-size: .7em;
+  text-align: center; }
+
+.mutoon-part {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+  .mutoon-part .title {
+    margin: 2em auto 1.5em;
+    font-style: oblique;
+    font-size: .8em; }
+  @media all and (max-width: 768px) {
+    .mutoon-part {
+      font-size: 1.1em; } }
+
+@media all and (max-width: 600px) {
+  .arabic-text {
+    text-align: right; }
+
+  .english-text {
+    text-align: left; } }
+
+/*# sourceMappingURL=SliderPage.css.map */

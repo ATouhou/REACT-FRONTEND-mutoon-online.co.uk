@@ -1,0 +1,49 @@
+.container {
+  position: static; }
+
+#book-content {
+  position: relative;
+  margin: auto;
+  max-width: 100% !important;
+  overflow-x: hidden !important; }
+
+.logo {
+  width: 100%;
+  padding: 1em 15px 0;
+  max-width: 400px; }
+  @media all and (max-width: 600px) {
+    .logo {
+      max-width: 200px; } }
+
+audio {
+  width: 100%; }
+
+audio, canvas, progress, video {
+  background: #009688 !important; }
+
+.select-wrapper {
+  margin-top: 1em; }
+
+.text-wrapper > * {
+  margin-bottom: 2em;
+  font-weight: 300; }
+
+.mutoon-part {
+  padding: 0 1em; }
+  @media all and (max-width: 700px) {
+    .mutoon-part {
+      text-align: justify !important; } }
+
+.swiper-slide {
+  background-color: #fff; }
+
+.swiper-button-prev, .swiper-button-next {
+  top: 3em !important; }
+
+.swiper-button-disabled {
+  display: none; }
+
+.swiper-pagination-progress .swiper-pagination-progressbar {
+  background: #009688 !important; }
+
+/*# sourceMappingURL=SliderContainer.css.map */
