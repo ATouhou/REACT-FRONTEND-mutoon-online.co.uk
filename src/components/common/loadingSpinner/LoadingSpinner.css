@@ -1,0 +1,27 @@
+.loading-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(238, 238, 238, 0.5);
+  text-align: center;
+  margin: auto;
+  z-index: 9999999999; }
+  .loading-spinner.fixed > .inner-wrapper {
+    position: fixed; }
+  .loading-spinner > .inner-wrapper {
+    /* Should be placed inside relatively positioned container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2em; }
+
+/*# sourceMappingURL=LoadingSpinner.css.map */

@@ -74,4 +74,19 @@ nav a.active {
 footer {
   font-size: .6em; }
 
+
+/* orig end */
+
+  .about {
+  min-height: 60%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 60vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+
+}
+.header-container{
+
+}
+
 /*# sourceMappingURL=styles.css.map */

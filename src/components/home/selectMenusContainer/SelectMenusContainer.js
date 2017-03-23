@@ -1,11 +1,13 @@
-/**
- * Created by lewisjames-odwin on 15/11/2016.
- */
-
 import React, {PropTypes} from 'react';
 import * as constants from '../../Constants';
 import SelectMenu from '../../common/selectMenu/SelectMenu';
 
+//Language Import
+import LocalizedStrings from 'react-localization';
+import LanguageStrings from '../../common/Language/Language.js';
+var ls = LanguageStrings.data;
+ls = new LocalizedStrings(ls);
+//End Language Import
 
 class SelectMenusContainer extends React.Component {
 
@@ -25,7 +27,7 @@ class SelectMenusContainer extends React.Component {
                         <SelectMenu htmlFor={"categoryList"} options={[this.props.renderCategoryOptions]}
                                     onChange={this.props.onChangeBookSelectMenu}
                                     title={constants.isObjectEmpty(this.props.selectedBookObject) ? "" : "Book"}
-                                    disabledOption={constants.isObjectEmpty(this.props.selectedBookObject) ? "Please tap here to select a book..." : "Please choose..."}/>
+                                    disabledOption={constants.isObjectEmpty(this.props.selectedBookObject) ? ls.TapToStart : ls.PChoose }/>
 
                     </div>
                     <div className=" col-xs-4">
@@ -33,7 +35,7 @@ class SelectMenusContainer extends React.Component {
                             :
                             <SelectMenu htmlFor={"pageList"} options={[this.props.renderPageOptions]}
                                         onChange={this.props.onChangePageSelectMenu} title={"Page"}
-                                        disabledOption={"Please choose..."}/>
+                                        disabledOption={ls.PChoose}/>
                         }
                     </div>
                 </div>

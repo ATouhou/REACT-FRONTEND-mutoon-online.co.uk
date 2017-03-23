@@ -1,10 +1,8 @@
-/**
- * Created by lewisjames-odwin on 16/10/2016.
- */
 import React, {PropTypes}  from 'react';
+
 import SelectMenu from '../common/selectMenu/SelectMenu';
 import SliderContainer from './sliderContainer/SliderContainer';
-import LoadingSpinner from './loadingSpinner/LoadingSpinner';
+import LoadingSpinner from '../common/loadingSpinner/LoadingSpinner';
 import SelectMenusContainer from './selectMenusContainer/SelectMenusContainer';
 import AudioPlayer from './audioPlayer/AudioPlayer';
 import AudioButtons from './audioButtons/AudioButtons';
@@ -15,6 +13,15 @@ import "whatwg-fetch";
 
 import '../../../vendor/bootstrap-material-design/material';
 import '../../../vendor/bootstrap-material-design/ripples';
+
+//Language Import
+import LocalizedStrings from 'react-localization';
+import LanguageStrings from '../common/Language/Language.js';
+var ls = LanguageStrings.data;
+ls = new LocalizedStrings(ls);
+//End Language Import
+
+
 
 
 let savedSelectedBookDataUnsortedFromAjax,
@@ -99,6 +106,7 @@ class HomePage extends React.Component {
      ########################################### FUNCTIONS #############################################################
      ###################################################################################################################
      #################################################################################################################*/
+
 
     //-- Ajax calls
     fetchBookCategoryData() {
@@ -242,10 +250,10 @@ class HomePage extends React.Component {
 
     renderCategoryOptions() {
         const renderCategoryOptions = this.state.bookCategories.map(function (category, i) {
-            if (category.name != "Unassigned") {
+            if (category.name_english != "Unassigned") {
                 return (
-                    <option value={category.slug} key={i}>
-                        {category.name}
+                    <option value={category.bookid} key={i}>
+                        {category.name_english} - {category.name_arabic}
                     </option>
                 );
             }
@@ -258,11 +266,11 @@ class HomePage extends React.Component {
             return (
                 i == 0 ?
                     <option value={i} key={i}>
-                        Intro
+                        {ls.Intro}
                     </option>
                     :
                     <option value={i} key={i}>
-                        Page {i}
+                        {ls.Page} {i}
                     </option>
 
             );
@@ -280,16 +288,18 @@ class HomePage extends React.Component {
 
                 let audioUrl;
 
-                if (selectedBook.acf.page_number == 0) {
+                if (selectedBook.page_number == 0) {
                     audioUrl = "empty";
                 } else {
-                    audioUrl = selectedBook.acf.audio.url;
+                    //audioUrl = selectedBook.acf.audio.url;
+                //constants.urlAudio
+                audioUrl = 'https://touhou.dk/muttoon/recitation_files/1/al-waajibaat-al-mutahattimat-part1.mp3';
                 }
 
-                selectedBookObject["part_" + selectedBook.acf.page_number] = {
-                    part: selectedBook.acf.page_number,
-                    arabic: selectedBook.acf.arabic,
-                    english: selectedBook.acf.english,
+                selectedBookObject["part_" + selectedBook.page_number] = {
+                    part: selectedBook.page_number,
+                    arabic: selectedBook.content_arabic,
+                    english: selectedBook.content_english,
                     audioUrl: audioUrl
                 };
 
